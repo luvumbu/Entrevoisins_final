@@ -1,0 +1,2 @@
+rootProject.name='TestVoid'
+include ':app'

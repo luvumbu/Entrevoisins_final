@@ -13,7 +13,7 @@ import com.openclassrooms.entrevoisins.R;
 import com.openclassrooms.entrevoisins.di.DI;
 import com.openclassrooms.entrevoisins.model.Neighbour;
 
-public class windows2 extends AppCompatActivity {
+public class NeighbourDetailsActivity extends AppCompatActivity {
     TextView userName1 ;
     TextView userName2 ;
     TextView userAdress ;

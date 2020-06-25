@@ -56,7 +56,7 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
             @Override
             public void onClick(View view) {
                 // démarrage de l'activite  2
-                Intent intents = new Intent(view.getContext(), windows2.class);
+                Intent intents = new Intent(view.getContext(), NeighbourDetailsActivity.class);
                 /*
                  */
              // intents.putIntegerArrayListExtra(neighbour,ArrayList);

@@ -24,7 +24,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class AddNeighbourActivity extends AppCompatActivity {
-
     @BindView(R.id.avatar)
     ImageView avatar;
     @BindView(R.id.nameLyt)
@@ -48,7 +47,6 @@ public class AddNeighbourActivity extends AppCompatActivity {
         mApiService = DI.getNeighbourApiService();
         init();
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -59,7 +57,6 @@ public class AddNeighbourActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
     private void init() {
         mNeighbourImage = randomImage();
         Glide.with(this).load(mNeighbourImage).placeholder(R.drawable.ic_account)
@@ -74,9 +71,7 @@ public class AddNeighbourActivity extends AppCompatActivity {
                 addButton.setEnabled(s.length() > 0);
             }
         });
-
     }
-
     @OnClick(R.id.create)
     void addNeighbour() {
         Neighbour neighbour = new Neighbour(
@@ -90,7 +85,6 @@ public class AddNeighbourActivity extends AppCompatActivity {
         mApiService.createNeighbour(neighbour);
         finish();
     }
-
     /**
      * Generate a random image. Useful to mock image picker
      * @return String
@@ -98,7 +92,6 @@ public class AddNeighbourActivity extends AppCompatActivity {
     String randomImage() {
         return "https://i.pravatar.cc/150?u="+ System.currentTimeMillis();
     }
-
     /**
      * Used to navigate to this activity
      * @param activity

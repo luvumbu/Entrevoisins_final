@@ -5,34 +5,25 @@ import java.util.Objects;
  * Model object representing a Neighbour
  */
 public class Neighbour implements Serializable {
-
     /** Identifier */
     private long id;
-
-
     /** Full name */
     private String name;
-
     /** Avatar */
     private String avatarUrl;
-
     /** Adress */
     private String address;
-
     /** Phone number */
     private String phoneNumber;
-
     /** About me */
     private String aboutMe;
-
     /**
      * Constructor
      * @param id
      * @param name
      * @param avatarUrl
      */
-    public Neighbour(long id, String name, String avatarUrl, String address,
-                     String phoneNumber, String aboutMe) {
+    public Neighbour(long id, String name, String avatarUrl, String address,String phoneNumber, String aboutMe) {
         this.id = id;
         this.name = name;
         this.avatarUrl = avatarUrl;

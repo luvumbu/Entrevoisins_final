@@ -1,6 +1,4 @@
 package com.openclassrooms.entrevoisins.ui.neighbour_list;
-
-
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
@@ -29,10 +27,8 @@ import static org.hamcrest.Matchers.allOf;
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class ListNeighbourStartActivity {
-
     @Rule
     public ActivityTestRule<ListNeighbourActivity> mActivityTestRule = new ActivityTestRule<>(ListNeighbourActivity.class);
-
     @Test
     public void listNeighbourActivityTest() {
         ViewInteraction appCompatImageView = onView(
@@ -47,22 +43,17 @@ public class ListNeighbourStartActivity {
 
         ViewInteraction textView = onView(
                 allOf(withId(R.id.userName1), withText("Caroline"),
-
-
                         isDisplayed()));
         textView.check(matches(withText("Caroline")));
     }
-
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
-
         return new TypeSafeMatcher<View>() {
             @Override
             public void describeTo(Description description) {
                 description.appendText("Child at position " + position + " in parent ");
                 parentMatcher.describeTo(description);
             }
-
             @Override
             public boolean matchesSafely(View view) {
                 ViewParent parent = view.getParent();

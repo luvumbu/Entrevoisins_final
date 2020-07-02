@@ -6,7 +6,6 @@ import com.openclassrooms.entrevoisins.model.Neighbour;
  * Event fired when a user deletes a Neighbour
  */
 public class DeleteNeighbourEvent {
-
     /**
      * Neighbour to delete
      */

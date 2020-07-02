@@ -1,5 +1,4 @@
 package com.openclassrooms.entrevoisins.ui.neighbour_list;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -20,14 +19,10 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import java.util.List;
-
 public class FavoritFragment extends Fragment {
-
     private NeighbourApiService mApiService;
     private List<Neighbour> mNeighbours;
     private RecyclerView mRecyclerView;
-
-
     /**
      * Create and return a new instance
      * @return @{@link FavoritFragment}
@@ -77,7 +72,6 @@ public class FavoritFragment extends Fragment {
         super.onStop();
         EventBus.getDefault().unregister(this);
     }
-
     /**
      * Fired if the user clicks on a delete button
      * @param event

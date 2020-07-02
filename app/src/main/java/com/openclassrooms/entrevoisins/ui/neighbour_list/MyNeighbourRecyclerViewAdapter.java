@@ -62,7 +62,6 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
              // intents.putIntegerArrayListExtra(neighbour,ArrayList);
                 intents.putExtra("user",neighbour);
                 view.getContext().startActivity(intents);
-
             }
         });
     }
